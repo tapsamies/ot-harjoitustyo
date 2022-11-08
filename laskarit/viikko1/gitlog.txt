@@ -1,0 +1,123 @@
+commit 09f24bb3e819c9dd52f5fb8753b4c28071acc3ca
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Nov 8 12:28:19 2022 +0200
+
+    tehtävä 11 thety
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 8d571c6be36df2e6723c0ec41e1ae9c651c9a781
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Nov 8 12:24:41 2022 +0200
+
+    tiedostot lisätty
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit fb2b7b836b1b9d896ea45fa9d45ebb2dd7d23369
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Nov 8 12:21:33 2022 +0200
+
+    tehtävä 9 tehty
+
+ eka.txt    | 6 +++---
+ kolmas.txt | 4 +++-
+ 2 files changed, 6 insertions(+), 4 deletions(-)
+
+commit ff096d955c1644e408c31615a112db80cd9bdbf3
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Nov 8 12:20:02 2022 +0200
+
+    a
+
+ eka.txt    | 70 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ kolmas.txt |  6 +++++-
+ 2 files changed, 75 insertions(+), 1 deletion(-)
+
+commit e684fd03a79482a7db7c6376d30f3fd54cc04cba
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Nov 8 12:04:47 2022 +0200
+
+    tiedosto.txt uudelleennimetty
+
+ tiedosto.txt | 75 ------------------------------------------------------------
+ 1 file changed, 75 deletions(-)
+
+commit 965ec8d34c96f35dd756872454104bff529c0b41
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Nov 8 12:03:51 2022 +0200
+
+    poistettu toinen
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 52c438549aa98385646b940b76bb3c9b69033cfa
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Nov 8 12:01:08 2022 +0200
+
+    muutokset
+
+ tiedosto.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 4a2f9adddf775be64a658bf437221b6c18752bdb
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Nov 8 11:59:59 2022 +0200
+
+    paljon tekstiä lisätty
+
+ tiedosto.txt | 74 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 74 insertions(+)
+
+commit 3a5ff7463ff69cbeed3c98ea68211c2d2b492ee1
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Nov 8 11:18:38 2022 +0200
+
+    muutokset
+
+ stuff/jokin.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit c5e9e11d89b9d8d05b0405f5d18cd9ae17ba330c
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Nov 8 11:17:30 2022 +0200
+
+    muutokset
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 6a614ffdaf8097e304d18faf7a6a4d5e385bb9c5
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Nov 8 11:16:30 2022 +0200
+
+    luotu kolmas
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit e8655d677382c972219916509202598d09c3fa0f
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Nov 8 11:11:55 2022 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 30072aed65bfa702f0c712d5387ca6aa0549dacd
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Nov 8 11:10:09 2022 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
