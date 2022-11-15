@@ -8,4 +8,6 @@
 
 [komentorivi.txt](https://github.com/tapsamies/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
-Jokin muutos
+### Viikko 2
+
+[vaatimusmäärittely.md](https://github.com/tapsamies/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusm%C3%A4%C3%A4rittely.md)
