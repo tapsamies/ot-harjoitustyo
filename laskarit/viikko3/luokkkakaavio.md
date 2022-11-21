@@ -5,7 +5,7 @@ classDiagram
 	Ruutu <|-- "0..8" Nappula
 	Pelilauta <|-- "2..8" Pelaaja
 	class Ruutu{
-		
+		+int sijainti
 		+aloitusruutu()
 		+vankila()
 		+sattuma()
