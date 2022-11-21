@@ -3,7 +3,8 @@ classDiagram
 	Pelilauta <|-- "40" Ruutu
 	Pelaaja <|-- Nappula
 	Ruutu <|-- Nappula
-	Pelaaja --|> "2..8" Pelilauta
+	Pelilauta <|-- "2..8" Pelaaja
+	
 	
 
 
