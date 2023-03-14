@@ -1,0 +1,125 @@
+
+git log --stat | cat     
+commit 5ef4320fb9936e56039c3144870911e0156c58a4
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Mar 14 12:51:02 2023 +0200
+
+    uudelleennimetty jne
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit a7a46a937c1791a9805bb7ef94a788f9cd6ed2b5
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Mar 14 12:44:36 2023 +0200
+
+    tiedostot tehty
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit a2a9c193e93b537d32a8c587c746afc9c0b13b43
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Mar 14 12:13:11 2023 +0200
+
+    muutokset
+
+ eka.txt    |  5 +++--
+ kolmas.txt | 18 +++++++++++++++++-
+ 2 files changed, 20 insertions(+), 3 deletions(-)
+
+commit 0d4356c72408451c56d0d60bb12c579c198ed61d
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Mar 14 12:10:54 2023 +0200
+
+    uudelleennimetty tiedosto ei tullut oikein äsken
+
+ eka.txt | 83 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 83 insertions(+)
+
+commit 1535ed6cedfdbff1283c0e1354e1fe758c8fdc63
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Mar 14 12:00:32 2023 +0200
+
+    uudelleennimetty
+
+ tiedosto.txt | 83 ------------------------------------------------------------
+ 1 file changed, 83 deletions(-)
+
+commit 806b71649d797111aabf2cc4232246b5dff14c83
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Mar 14 11:58:59 2023 +0200
+
+    muutoksia
+
+ toinen.txt | 2 --
+ 1 file changed, 2 deletions(-)
+
+commit da430afeb4d1f68cf897deb77a3da06d9ff49575
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Mar 14 11:56:49 2023 +0200
+
+    teksti lisäty
+
+ tiedosto.txt | 61 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 61 insertions(+)
+
+commit e0955dfd5fa155fed98ac45292a6559ad7137fce
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Mar 14 11:55:59 2023 +0200
+
+    teksti lisäty
+
+ tiedosto.txt | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+
+commit 2236dde8ff2376b20f0a8d3bcf23ed587602cbe7
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Mar 14 11:48:52 2023 +0200
+
+    stuff tehty ja sisälle tiedost
+
+ stuff/jokin.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 5750f3699388e18af68da069caa1a3e09b4fb30f
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Mar 14 11:47:46 2023 +0200
+
+    Muutos ja lisäus
+
+ kolmas.txt | 1 +
+ toinen.txt | 2 ++
+ 2 files changed, 3 insertions(+)
+
+commit 450211e9caf6658abaffc9671dc6a842697c710f
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Mar 14 11:45:32 2023 +0200
+
+    lisäys
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit d5b9e643e404fd0597bbb1bd1e92a9b0b304f2f5
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Mar 14 11:43:38 2023 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit bf4126db5cd5ba8e27a1fe4149c3f5451547c167
+Author: Joonas Tapio <joonas.tapio@helsinki.fi>
+Date:   Tue Mar 14 11:41:30 2023 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
