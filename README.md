@@ -6,3 +6,5 @@
 [komentorivi.txt](https://github.com/tapsamies/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
 jokin muutos
+
+muutos
