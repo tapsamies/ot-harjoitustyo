@@ -3,6 +3,8 @@
 ### Sovelluksen tarkoitus
 Sovelluksena on tetris -pelin klooni. Kuten tetriksessäkin on pelissä ideana sijoittaa vaihtuvalla muodolla ruudulle ilmestyvät palikat siten että ruudulle jo asettuneet palikat muodostavat kokonaisia vaakasuuntaisia rivejä. 
 
+### Käyttäjät
+ - Pelissä ainoa käyttäjä on pelaaja itse, joten käyttäjärooleja ei sen ulkopuolella ole.
 
 ### Suunniteltu toiminnallisuus
 
