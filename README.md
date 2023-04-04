@@ -1,4 +1,4 @@
-# Ohjelmistotekniikka, harjoitustyö
+# Ohjelmistotekniikka, harjoitustyö Tetris
 
 ### Dokumentaatio
 [Tuntikirjanpito](https://github.com/tapsamies/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
