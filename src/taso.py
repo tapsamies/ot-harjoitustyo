@@ -9,14 +9,8 @@ from sprites.z_pala import z_pala
 
 
 
-
 class Taso:
     def __init__(self,korkeus,leveys):
-        """
-        ideana on se että peliruudukko vie ~85% näytöllä olevasta tilasta
-        loput tilasta tulee pistelaskurille, seuraaville paloille ja 
-        yksinkertaiselle valikolle.
-        """
-        self.solu_x=0.9*leveys/10
-        self.solu_y=0.95*korkeus/20
-        s_pala().muoto
+        s_pala(korkeus,leveys)
+        
+        
