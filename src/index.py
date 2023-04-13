@@ -1,29 +1,34 @@
 import pygame
-from taso import Taso
+from taso import Taso 
+KOKO = 30
+KORKEUS = 30
+LEVEYS = 25
 
-
-KOKO=30
-KORKEUS=20
-LEVEYS=10
 
 def main():
+    pygame.init()
     pygame.display.set_caption("Tetris")
-    korkeus=KORKEUS*KOKO
-    leveys=LEVEYS*KOKO
-    ruutu = pygame.display.set_mode((korkeus,leveys))
-    tausta = pygame.Surface(ruutu.get_size())
-    tausta.fill((0,0,0))
-    tausta = tausta.convert()
-    ataso = Taso(korkeus,leveys)
-    #logiiikka ei vielä omassa kansiossaan
+    teksti = pygame.font.Font(pygame.font.get_default_font(),18)
+     
+    korkeus = KORKEUS*KOKO
+    leveys = LEVEYS*KOKO
+    ruutu = pygame.display.set_mode((leveys, korkeus))
+    palaa= pygame.image.load("src/assets/nelio.png")
+    x,y=0,0
+    sana = teksti.render("AAAA",True,(200,200,0),(100,100,100))
+    # logiiikka ei vielä omassa kansiossaan
     while True:
-        ruutu.blit(tausta,(0,0))
+        
+        ruutu.fill((110, 110, 110))
+        ruutu.blit(palaa, (x, y))
+        ruutu.blit(sana,(200,200))
+        pygame.draw.line(ruutu,(0,0,0),(0,0),(100,100))
+        y+=0.1
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return False
-         
 
+        pygame.display.update()
 
-if __name__ =="__main__":
+if __name__ == "__main__":
     main()
-
