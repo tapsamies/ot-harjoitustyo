@@ -10,3 +10,5 @@
 |6    |4.4.23| tehty loppuja tehtäviä ja commitoitu tuon aikaisemman tunnin tehtävät |
 |7    |13.4.23| opiskeltu pygamen toimintaa ja tehty poetry run invoke start toimivaksi |
 |8    |13.4.23| tehty pelin ikkunaan päivitykset siten että se näyttää jotain |
+|9    |17.4.23| tehty peliin tapahtumat |
+|10   |17.4.23| tehty peliin törmäykset ym, palikat vielä puuttuu |
