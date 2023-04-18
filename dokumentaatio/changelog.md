@@ -2,3 +2,9 @@
  - lisätty luokat palikoille mitä sovellukseen tulee
  - lisätty potentiaalisia luokkia valmiiseen sovellukseen
  - kirjoitettu eka testi
+
+## Viikko 4
+ - Tehty osa palikoista valmiiksi, törmäys toimii osittain, ei generointia
+ - Testejä ei tehty, mutta projekti toimiii poetry -komennoilla
+ - Logiikkaa eriytetty vähän omiin kansioihin
+

@@ -13,6 +13,10 @@ Tetris on tietokonepeli, jossa ruudulle ilmestyvistä palikoista yritetään saa
 
 [Changelog](https://github.com/tapsamies/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 
-### Asennus
+[Arkkitehtuuri](https://github.com/tapsamies/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
+### Asennus ja käyttö
  
- Ei toiminnallisuutta asentamiseen vielä
+ Ei tarvetta vielä asentamiseen
+ 
+ Käyttö onnistuu poetry run invoke start -komennolla

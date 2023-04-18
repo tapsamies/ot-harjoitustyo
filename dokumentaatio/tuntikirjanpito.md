@@ -12,3 +12,7 @@
 |8    |13.4.23| tehty pelin ikkunaan päivitykset siten että se näyttää jotain |
 |9    |17.4.23| tehty peliin tapahtumat |
 |10   |17.4.23| tehty peliin törmäykset ym, palikat vielä puuttuu |
+|11   |18.4.23| mietitty kuinka palikat saadaan luotua ilman plagiointia |
+|12   |18.4.23| tehty luokkia ja eriytetty sovelluslogiikkaa |
+|13   |18.4.23| oltu jumissa vaikka kuinka paljon |
+|14   |18.4.23| yksi palikka valmis, logiikka sen osalta ei |
