@@ -17,6 +17,14 @@ Tetris on tietokonepeli, jossa ruudulle ilmestyvistä palikoista yritetään saa
 
 ### Asennus ja käyttö
  
- Ei tarvetta vielä asentamiseen
- 
- Käyttö onnistuu poetry run invoke start -komennolla
+1. Käytä tätä komentoa asennusta varten:
+
+```bash
+poetry install
+```
+
+2. Sovellusta voi nyt käyttää komennolla:
+
+```bash
+poetry run invoke start
+```
