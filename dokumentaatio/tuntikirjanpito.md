@@ -16,3 +16,8 @@
 |12   |18.4.23| tehty luokkia ja eriytetty sovelluslogiikkaa |
 |13   |18.4.23| oltu jumissa vaikka kuinka paljon |
 |14   |18.4.23| yksi palikka valmis, logiikka sen osalta ei |
+|15   |23.4.23| alettu miettimään kuinka palikoita sais tehtyä fiksusti |
+|16   |23.4.23| palikat olemassa niin että ne voi luoda |
+|17   |23.4.23| ohjelma osaa valita satunnaisesti palikan |
+|18   |23.4.23| palikoiden törmäyksen rakentamista mietitty |
+|19   |23.4.23| oltu jumissa palikoiden törmäyksen osalta |

@@ -12,5 +12,5 @@ Sovelluksena on tetris -pelin klooni. Kuten tetriksessäkin on pelissä ideana s
 	- Peli nopeutuu suhteessa pisteiden kasvuun
  - Peli loppuu kun vaakarivien maksimikorkeus ylittää pelaajalle näkyvän ruudukon
 	- Maksimipisteet tallennetaan jos saadaan uusi ennätys
- - Pelissä on kaikki tetriksen vakiomuotoiset palikat(palikat tehty, muttei vielä käytössä)
-	- Jonkinlainen satunnaisgeneraattori palikoiden tekemistä varten
+ - Pelissä on kaikki tetriksen vakiomuotoiset palikat(tehty)
+	- Jonkinlainen satunnaisgeneraattori palikoiden tekemistä varten(tehty)
