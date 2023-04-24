@@ -21,3 +21,6 @@
 |17   |23.4.23| ohjelma osaa valita satunnaisesti palikan |
 |18   |23.4.23| palikoiden törmäyksen rakentamista mietitty |
 |19   |23.4.23| oltu jumissa palikoiden törmäyksen osalta |
+|20   |24.4.23| otettu oppia internetistä  palikoiden tekoon|
+|21   |24.4.23| muutettu palikoita sprite -muotoiseksi |
+|22   |24.4.23| palikoiden ominaisuuksien hyödyntämistä opiskeltu |
