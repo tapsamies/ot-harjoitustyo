@@ -24,3 +24,6 @@
 |20   |24.4.23| otettu oppia internetistä  palikoiden tekoon|
 |21   |24.4.23| muutettu palikoita sprite -muotoiseksi |
 |22   |24.4.23| palikoiden ominaisuuksien hyödyntämistä opiskeltu |
+|23   |25.4.23| järjestelty palikoiden objektia uudelleen |
+|24   |25.4.23| tehty runkoa jonka päälle voi rakentaa tarvittavat ominaisuudet |
+|25   |25.4.23| mietitty miten blitin saisi käyttäytymään spriten lailla |
