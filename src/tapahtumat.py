@@ -2,5 +2,6 @@ import pygame
 
 
 class Nappain:
-    def get(self):
+    @staticmethod
+    def get():
         return pygame.event.get()

@@ -37,9 +37,18 @@ class Palikka(pygame.sprite.Sprite):
         #tähän tulee toiminnallisuus uuden palan piirtämistä varten
         self.draw(self.x_akseli,self.y_akseli)
 
+
+    def osuu(self,joukko):
+        for i in joukko:
+            if i == self:
+                continue
+            if pygame.sprite.collide_mask(self,i) is not None:
+                return True
+        return False
+
     @property
     def joukko(self):
-        return self.groups()[:-2]
+        return self.groups()
     @property
     def nyt(self):
         return self.sprites()[-1]
@@ -64,18 +73,18 @@ class Palikka(pygame.sprite.Sprite):
 
     def tipu(self,joukko):
         self.y_akseli+=1
-        if self.rect.bottom > KOKO*20 or pygame.sprite.spritecollideany(self,joukko) is not None:
+        if self.rect.bottom > KOKO*20 or self.osuu(joukko) is True:
             self.y_akseli-=1
             self.nykyinen= False
 
     def oikeaan(self,joukko):
         self.x_akseli+=1
-        if self.rect.right > KOKO*10:
+        if self.rect.right > KOKO*10 or self.osuu(joukko) is True:
             self.x_akseli-=1
 
     def vasempaan(self,joukko):
         self.x_akseli-=1
-        if self.x_akseli < 0:
+        if self.x_akseli < 0 or self.osuu(joukko) is True:
             self.x_akseli +=1
 
 #Palojen muodot + värit
@@ -89,10 +98,10 @@ class Lpala(Palikka):
 
 class Ipala(Palikka):
     color = (0, 191, 255)
-    muoto = [[1,0],
-             [1,0],
-             [1,0],
-             [1,0]]
+    muoto = [[1],
+             [1],
+             [1],
+             [1]]
 
 
 class Spala(Palikka):

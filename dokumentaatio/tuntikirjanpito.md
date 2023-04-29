@@ -30,3 +30,4 @@
 |26   |29.4.23| opittu hyödyntämään sprite -luokan -draw -toimintoa |
 |27   |29.4.23| eriytetty x- ja y-arvot paloille itselleen ja nyt saadaan monta palaa |
 |28   |29.4.23| yritetty saada palojen törmäystä toimimaan niinkuin pitää |
+|29   |29.4.23| törmäys toimii niin kuin pitääkin |

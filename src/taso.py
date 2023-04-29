@@ -27,37 +27,22 @@ class Taso(pygame.sprite.Group):
         self.piirra()
         self.teetee()
 
-    @property
-    def spritet(self):
-        return [i for i in self.sprites()[:-1]]
 
     @property
     def uusin(self):
         return self.sprites()[-1]
-    @property
-    def osuu(self):
-        pass
-        #for i in self.spritet:
-         #   if pygame.sprite.collide_mask(self.uusin,i) is not None:
-          #      return True
-        #    return pygame.sprite.collide_rect(self.uusin,i)
-        #return pygame.sprite.spritecollideany(self.uusin,self.spritet)
-
 
     def tiputa(self):
+        self.uusin.tipu(self)
 
-        if self.uusin.nykyinen is False or self.osuu is True:
+        if self.uusin.nykyinen is False:
             #self.uusin.nykyinen=True
             self.pala()
-        else:
-            self.uusin.tipu(self)
     def vasen(self):
-        if self.osuu is False:
-            self.uusin.vasempaan(self)
+        self.uusin.vasempaan(self)
 
     def oikea(self):
-        if self.osuu is False:
-            self.uusin.oikeaan(self)
+        self.uusin.oikeaan(self)
 
 def satunnainen_palikka():
-    return random.choice((Spala,Jpala,Lpala,Lpala,Npala,Ipala,Zpala,Tpala))()
+    return random.choice((Spala,Jpala,Lpala,Npala,Ipala,Zpala,Tpala))()
