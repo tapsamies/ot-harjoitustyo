@@ -26,6 +26,7 @@ def main():
 
         ruutu.fill((0, 0, 0))
         ruutu.blit(sana, (LEVEYS-sana.get_width(), 0))
+         
 
         for i in range(0, 11):
             pygame.draw.lines(ruutu, (110, 110, 110), True,
@@ -34,17 +35,19 @@ def main():
             pygame.draw.lines(ruutu, (110, 110, 110), True,
                               ((0, i*KOKO), (KOKO*10, i*KOKO)))
 
-        if pala.y_y < KORKEUS-KOKO*3:
-            pala.tipu()
-        else:
-            pala.pala(ruutu,x_akseli)
+        #if pala.y_y < KORKEUS-KOKO*3:
+         #   pala.tipu()
+        #else:
+        #    pala.pala(ruutu,x_akseli)
 
         for event in Nappain.get(main):
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
-                    vasen = True
+                    pala.vasen()
                 if event.key == pygame.K_RIGHT:
-                    oikea = True
+                    pala.oikea()
+                if event.key == pygame.K_DOWN:
+                    pala.tiputa()
 
             if event.type == pygame.KEYUP:
                 if event.key == pygame.K_LEFT:
@@ -60,7 +63,8 @@ def main():
         if oikea and x_akseli<KOKO*10 :  # palikan koko pitäs selvittää
             x_akseli += KOKO
 
-        pala.pala(ruutu,x_akseli)
+        pala.draw(ruutu)
+        #pala.pala(ruutu,x_akseli)
         kello.tick(60)
         pygame.display.update()
 

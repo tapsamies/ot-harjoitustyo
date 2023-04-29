@@ -5,11 +5,12 @@ class Palikka(pygame.sprite.Sprite):
 
     def __init__(self):
         super().__init__()
-        self.draw()
         self.muoto=list(self.muoto)
         self.mask=None
+        self.nykyinen=True
+        self.draw()
 
-    def draw(self,x_akseli=4, y_akseli=0):
+    def draw(self,x_akseli=4, y_akseli=-2):
         self.leveys=len(self.muoto[0])*KOKO
         self.korkeus=len(self.muoto)*KOKO
         self.image = pygame.Surface((self.leveys,self.korkeus))
@@ -35,6 +36,47 @@ class Palikka(pygame.sprite.Sprite):
     def rdraw(self):
         #tähän tulee toiminnallisuus uuden palan piirtämistä varten
         self.draw(self.x_akseli,self.y_akseli)
+
+    @property
+    def joukko(self):
+        return self.groups()[:-2]
+    @property
+    def nyt(self):
+        return self.sprites()[-1]
+
+    @property
+    def y_akseli(self):
+        return self._y_akseli
+
+    @y_akseli.setter
+    def y_akseli(self, arvo):
+        self._y_akseli = arvo
+        self.rect.top = arvo*KOKO
+
+    @property
+    def x_akseli(self):
+        return self._x_akseli
+
+    @x_akseli.setter
+    def x_akseli(self,arvo):
+        self._x_akseli = arvo
+        self.rect.left = arvo*KOKO
+
+    def tipu(self,joukko):
+        self.y_akseli+=1
+        if self.rect.bottom > KOKO*20 or pygame.sprite.spritecollideany(self,joukko) is not None:
+            self.y_akseli-=1
+            self.nykyinen= False
+
+    def oikeaan(self,joukko):
+        self.x_akseli+=1
+        if self.rect.right > KOKO*10:
+            self.x_akseli-=1
+
+    def vasempaan(self,joukko):
+        self.x_akseli-=1
+        if self.x_akseli < 0:
+            self.x_akseli +=1
 
 #Palojen muodot + värit
 

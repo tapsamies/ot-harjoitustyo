@@ -27,3 +27,6 @@
 |23   |25.4.23| järjestelty palikoiden objektia uudelleen |
 |24   |25.4.23| tehty runkoa jonka päälle voi rakentaa tarvittavat ominaisuudet |
 |25   |25.4.23| mietitty miten blitin saisi käyttäytymään spriten lailla |
+|26   |29.4.23| opittu hyödyntämään sprite -luokan -draw -toimintoa |
+|27   |29.4.23| eriytetty x- ja y-arvot paloille itselleen ja nyt saadaan monta palaa |
+|28   |29.4.23| yritetty saada palojen törmäystä toimimaan niinkuin pitää |

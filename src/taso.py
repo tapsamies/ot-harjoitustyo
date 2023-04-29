@@ -3,37 +3,61 @@ import pygame
 from sprites.palat import Spala, Jpala, Lpala, Npala, Ipala, Tpala, Zpala
 KOKO = 40
 
-class Taso(pygame.sprite.OrderedUpdates):
+class Taso(pygame.sprite.Group):
 
     def __init__(self, *args, **kwargs):
         super().__init__(self, *args, **kwargs)
         self.x_x,self.y_y=0,0
-        self.koko = KOKO
-        self.palikka= satunnainen_palikka()
+        self.ruudukko=None
         self.uus_pala=None
-        self.palikat=[]
+        self.piirra()
+        self.pala()
 
-    def piirra(self, ruutu):
-        #pala piirtyy kuvana johonkin päin ruutua,
-        #mutta ei pysty vielä muuten tekemään ruudukossa mitään
-        ruutu.blit(self.palikka.image, (self.x_x,self.y_y))
+    def piirra(self):
+        pass
 
-    def pala(self,ruutu,x_akseli):
+    def teetee(self):
+        pass
+
+    def pala(self):
 
         uusi_palikka=self.uus_pala or satunnainen_palikka()
-        self.uus_pala=satunnainen_palikka()
         self.add(uusi_palikka)
-        #yläpuolella olevat 3 riviä vielä tee mitään näkyvää
-        self.x_x=x_akseli
-        self.piirra(ruutu)
+        self.uus_pala=satunnainen_palikka()
+        self.piirra()
+        self.teetee()
 
-    def nollaa(self):
-        self.y_y=0
-        self.palikka= satunnainen_palikka()
+    @property
+    def spritet(self):
+        return [i for i in self.sprites()[:-1]]
 
-    def tipu(self):
-        self.y_y+=3
+    @property
+    def uusin(self):
+        return self.sprites()[-1]
+    @property
+    def osuu(self):
+        pass
+        #for i in self.spritet:
+         #   if pygame.sprite.collide_mask(self.uusin,i) is not None:
+          #      return True
+        #    return pygame.sprite.collide_rect(self.uusin,i)
+        #return pygame.sprite.spritecollideany(self.uusin,self.spritet)
 
+
+    def tiputa(self):
+
+        if self.uusin.nykyinen is False or self.osuu is True:
+            #self.uusin.nykyinen=True
+            self.pala()
+        else:
+            self.uusin.tipu(self)
+    def vasen(self):
+        if self.osuu is False:
+            self.uusin.vasempaan(self)
+
+    def oikea(self):
+        if self.osuu is False:
+            self.uusin.oikeaan(self)
 
 def satunnainen_palikka():
     return random.choice((Spala,Jpala,Lpala,Lpala,Npala,Ipala,Zpala,Tpala))()
