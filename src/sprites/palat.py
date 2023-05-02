@@ -1,5 +1,5 @@
 import pygame
-KOKO=40
+SIZE=40
 
 class Palikka(pygame.sprite.Sprite):
 
@@ -11,8 +11,8 @@ class Palikka(pygame.sprite.Sprite):
         self.draw()
 
     def draw(self,x_akseli=4, y_akseli=-2):
-        self.leveys=len(self.muoto[0])*KOKO
-        self.korkeus=len(self.muoto)*KOKO
+        self.leveys=len(self.muoto[0])*SIZE
+        self.korkeus=len(self.muoto)*SIZE
         self.image = pygame.Surface((self.leveys,self.korkeus))
         self.image.set_colorkey((0,0,0))
         self.rect = pygame.Rect(0,0,self.leveys,self.korkeus)
@@ -25,8 +25,8 @@ class Palikka(pygame.sprite.Sprite):
                     pygame.draw.rect(
                             self.image,
                             self.color,
-                            pygame.Rect(j*KOKO+1,i*KOKO+1,
-                                        KOKO-2,KOKO-2))
+                            pygame.Rect(j*SIZE+1,i*SIZE+1,
+                                        SIZE-2,SIZE-2))
         self.tee_mask()
 
     def tee_mask(self):
@@ -60,7 +60,7 @@ class Palikka(pygame.sprite.Sprite):
     @y_akseli.setter
     def y_akseli(self, arvo):
         self._y_akseli = arvo
-        self.rect.top = arvo*KOKO
+        self.rect.top = arvo*SIZE
 
     @property
     def x_akseli(self):
@@ -69,23 +69,25 @@ class Palikka(pygame.sprite.Sprite):
     @x_akseli.setter
     def x_akseli(self,arvo):
         self._x_akseli = arvo
-        self.rect.left = arvo*KOKO
+        self.rect.left = arvo*SIZE
 
     def tipu(self,joukko):
         self.y_akseli+=1
-        if self.rect.bottom > KOKO*20 or self.osuu(joukko) is True:
+        if self.rect.bottom > SIZE*20 or self.osuu(joukko) is True:
             self.y_akseli-=1
             self.nykyinen= False
 
     def oikeaan(self,joukko):
         self.x_akseli+=1
-        if self.rect.right > KOKO*10 or self.osuu(joukko) is True:
+        if self.rect.right > SIZE*10 or self.osuu(joukko) is True:
             self.x_akseli-=1
 
     def vasempaan(self,joukko):
         self.x_akseli-=1
         if self.x_akseli < 0 or self.osuu(joukko) is True:
             self.x_akseli +=1
+
+
 
 #Palojen muodot + värit
 

@@ -12,3 +12,8 @@
  - Kaikki palikat olemassa, törmäys ei toimi
  - Peli osaa generoida satunnaisesti uuden palikan(toki vain yhden)
  - Logiikka saatu enemmän omiin kansioihin
+
+## Viikko 6
+ - Kaikki palikat mahdollista tulla peliin
+ - Törmäys toimii niinkuin pitääkin
+ - Toteutettu korjausehdotuksia mitä koodikatselmoinnissa annettu

@@ -31,3 +31,4 @@
 |27   |29.4.23| eriytetty x- ja y-arvot paloille itselleen ja nyt saadaan monta palaa |
 |28   |29.4.23| yritetty saada palojen törmäystä toimimaan niinkuin pitää |
 |29   |29.4.23| törmäys toimii niin kuin pitääkin |
+|30   |2.5.23| muutettu osa muuttujista suomen kielestä englannin kieleen |

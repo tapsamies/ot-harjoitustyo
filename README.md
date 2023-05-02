@@ -28,3 +28,17 @@ poetry install
 ```bash
 poetry run invoke start
 ```
+
+3. Sovelluksen testaaminen toimii komennolla:
+
+```bash
+poetry run invoke test
+```
+
+4. Sovelluksen testien tulos toimii komennolla:
+
+```bash
+poetry run invoke coverage-report
+```
+
+

@@ -1,7 +1,7 @@
 import random
 import pygame
 from sprites.palat import Spala, Jpala, Lpala, Npala, Ipala, Tpala, Zpala
-KOKO = 40
+SIZE = 40
 
 class Taso(pygame.sprite.Group):
 
