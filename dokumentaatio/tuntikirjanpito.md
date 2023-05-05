@@ -32,3 +32,4 @@
 |28   |29.4.23| yritetty saada palojen törmäystä toimimaan niinkuin pitää |
 |29   |29.4.23| törmäys toimii niin kuin pitääkin |
 |30   |2.5.23| muutettu osa muuttujista suomen kielestä englannin kieleen |
+|31   |5.5.23| muutettu loput muuttujat englanniksi ja paloja voi pyöroittää vähän |

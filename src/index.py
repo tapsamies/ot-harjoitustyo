@@ -1,5 +1,5 @@
 import pygame
-from taso import Taso
+from level import Level
 
 SIZE = 40
 HEIGHT = 20*SIZE
@@ -9,21 +9,21 @@ WIDTH = 14*SIZE
 def main():
 
     pygame.init()
-    kello = pygame.time.Clock()
+    clock = pygame.time.Clock()
     pygame.display.set_caption("Tetris")
-    teksti = pygame.font.Font(pygame.font.get_default_font(), 18)
+    text = pygame.font.Font(pygame.font.get_default_font(), 18)
 
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
     score = 0
-    block= Taso()
-    sana = teksti.render(f"Pisteet: {score}",
+    block= Level()
+    word = text.render(f"Pisteet: {score}",
                          True, (200, 200, 0), (100, 100, 100))
 
 
     while True:
 
         screen.fill((0, 0, 0))
-        screen.blit(sana, (WIDTH-sana.get_width(), 0))
+        screen.blit(word, (WIDTH-word.get_width(), 0))
 
 
         for i in range(0, 11):
@@ -36,18 +36,21 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
-                    block.vasen()
+                    block.left()
                 if event.key == pygame.K_RIGHT:
-                    block.oikea()
+                    block.right()
                 if event.key == pygame.K_DOWN:
-                    block.tiputa()
+                    block.drop()
+                if event.key == pygame.K_UP:
+                    block.rotate()
+
 
             if event.type == pygame.QUIT:
                 return False
 
 
         block.draw(screen)
-        kello.tick(60)
+        clock.tick(60)
         pygame.display.update()
 
 if __name__ == "__main__":
