@@ -33,3 +33,6 @@
 |29   |29.4.23| törmäys toimii niin kuin pitääkin |
 |30   |2.5.23| muutettu osa muuttujista suomen kielestä englannin kieleen |
 |31   |5.5.23| muutettu loput muuttujat englanniksi ja paloja voi pyöroittää vähän |
+|32   |6.5.23| koodia jaettu enemmän omiin luokkiin |
+|33   |6.5.23| opittu atomisten kommittien tarkoitus |
+|34   |6.5.23| aloitettu mietimään palikoiden automaattista tippumista |
