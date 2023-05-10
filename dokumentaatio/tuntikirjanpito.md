@@ -36,3 +36,4 @@
 |32   |6.5.23| koodia jaettu enemmän omiin luokkiin |
 |33   |6.5.23| opittu atomisten kommittien tarkoitus |
 |34   |6.5.23| aloitettu mietimään palikoiden automaattista tippumista |
+|35   |10.5.23| palikoita pystyy nyt kääntämään oikein, mutta ei vielä toimi oikein |

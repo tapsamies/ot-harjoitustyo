@@ -88,8 +88,16 @@ class Block(pygame.sprite.Sprite):
             self.x_axel +=1
 
     def rotate(self,group):
-        self.shape.reverse()
-
+        rows = len(self.shape)
+        cols = len(self.shape[0])
+        rotated = [[0 for _ in range(rows)] for _ in range(cols)]
+        for i in range(rows):
+            for j in range(cols):
+                rotated[j][rows - 1 -i] = self.shape[i][j]
+        if self.hits(group) is False:
+            self.shape = rotated
+        if self.hits(group) is True:
+            self.y_axel-=1
         for i in self.shape:
             self.draw(self._x_axel,self._y_axel)
 
