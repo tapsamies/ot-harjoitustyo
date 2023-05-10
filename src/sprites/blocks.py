@@ -96,9 +96,16 @@ class Block(pygame.sprite.Sprite):
                 rotated[j][rows - 1 -i] = self.shape[i][j]
         if self.hits(group) is False:
             self.shape = rotated
-        if self.hits(group) is True:
-            self.y_axel-=1
+
+
         for i in self.shape:
+            if self.rect.right > SIZE*10 or self.hits(group) is True:
+                self.x_axel-=1
+            if self.x_axel < 0 or self.hits(group) is True:
+                self.x_axel +=1
+            if self.hits(group) is True or self.rect.bottom > SIZE*20:
+                self.y_axel-=1
+            
             self.draw(self._x_axel,self._y_axel)
 
 #Palojen muodot + värit
@@ -112,10 +119,10 @@ class Lblock(Block):
 
 class Iblock(Block):
     color = (0, 191, 255)
-    shape = [[0,1,0],
-             [0,1,0],
-             [0,1,0],
-             [0,1,0]]
+    shape = [[1],
+             [1],
+             [1],
+             [1]]
 
 
 class Sblock(Block):

@@ -37,3 +37,4 @@
 |33   |6.5.23| opittu atomisten kommittien tarkoitus |
 |34   |6.5.23| aloitettu mietimään palikoiden automaattista tippumista |
 |35   |10.5.23| palikoita pystyy nyt kääntämään oikein, mutta ei vielä toimi oikein |
+|36   |10.5.23| pelissä on nyt pause -valikko, joka ei tosin vielä tee mitään |

@@ -34,10 +34,13 @@ class GameLoop:
                     self.level.drop()
                 if event.key == pygame.K_UP:
                     self.level.rotate()
-
+                if event.key == pygame.K_ESCAPE:
+                    self.pause = not self.pause
             elif event.type == pygame.QUIT:
                 self.running=False
 
     def interface(self):
         if self.pause is False:
             self._user_interface.show()
+        if self.pause is True:
+            self._user_interface.pause()
