@@ -11,7 +11,6 @@ class GameScreen:
         self.width = self.display.get_width()
         self.size = self.height//20
         self.font = pygame.font.Font(pygame.font.get_default_font(),18)
-        self.word = self.font.render("Press ESC to resume",True,(69,69,69),(255,255,255))
     def show(self):
         self.level.draw(self.display)
         self.display.fill((0,0,0))
@@ -29,5 +28,10 @@ class GameScreen:
     def pause(self):
         self.level.draw(self.display)
         self.display.fill((100,100,100))
-        self.display.blit(self.word,(200,200))
+        pygame.draw.rect(self.display,(0,0,0),(self.display.get_width()*0.1,
+                                               self.display.get_height()*0.1,
+                                               self.display.get_width()*0.8,
+                                               self.display.get_height()*0.8))
+        self.display.blit(self.font.render("Press ESC to start",True,(69,69,69),(255,255,255)),(200,200))
+        self.display.blit(self.font.render("Press R to restart",True,(69,69,69),(255,255,255)),(200,250))
         pygame.display.update()

@@ -105,7 +105,7 @@ class Block(pygame.sprite.Sprite):
                 self.x_axel +=1
             if self.hits(group) is True or self.rect.bottom > SIZE*20:
                 self.y_axel-=1
-            
+
             self.draw(self._x_axel,self._y_axel)
 
 #Palojen muodot + värit

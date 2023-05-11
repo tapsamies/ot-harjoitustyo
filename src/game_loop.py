@@ -8,7 +8,7 @@ class GameLoop:
         self.size = size
         self.clock = clock
         self._user_interface = user_interface
-        self.pause = False
+        self.pause = True
         self.running = True
         self.score = 0
         self.run()
@@ -26,13 +26,13 @@ class GameLoop:
     def actions(self):
         for event in pygame.event.get():
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_LEFT:
+                if event.key == pygame.K_LEFT and self.pause is False:
                     self.level.left()
-                if event.key == pygame.K_RIGHT:
+                if event.key == pygame.K_RIGHT and self.pause is False:
                     self.level.right()
-                if event.key == pygame.K_DOWN:
+                if event.key == pygame.K_DOWN and self.pause is False:
                     self.level.drop()
-                if event.key == pygame.K_UP:
+                if event.key == pygame.K_UP and self.pause is False:
                     self.level.rotate()
                 if event.key == pygame.K_ESCAPE:
                     self.pause = not self.pause
