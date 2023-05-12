@@ -8,11 +8,12 @@ class Block(pygame.sprite.Sprite):
         self.shape=list(self.shape)
         self.mask=None
         self.current=True
+        self.size=SIZE
         self.draw()
 
     def draw(self,x_axel=4, y_axel=-2):
-        self.width=len(self.shape[0])*SIZE
-        self.height=len(self.shape)*SIZE
+        self.width=len(self.shape[0])*self.size
+        self.height=len(self.shape)*self.size
         self.image = pygame.Surface((self.width,self.height))
         self.image.set_colorkey((0,0,0))
         self.rect = pygame.Rect(0,0,self.width,self.height)
@@ -25,8 +26,8 @@ class Block(pygame.sprite.Sprite):
                     pygame.draw.rect(
                             self.image,
                             self.color,
-                            pygame.Rect(j*SIZE+1,i*SIZE+1,
-                                        SIZE-2,SIZE-2))
+                            pygame.Rect(j*self.size+1,i*self.size+1,
+                                        self.size-2,self.size-2))
         self.do_mask()
 
     def do_mask(self):
@@ -60,7 +61,7 @@ class Block(pygame.sprite.Sprite):
     @y_axel.setter
     def y_axel(self, value):
         self._y_axel = value
-        self.rect.top = value*SIZE
+        self.rect.top = value*self.size
 
     @property
     def x_axel(self):
@@ -69,17 +70,17 @@ class Block(pygame.sprite.Sprite):
     @x_axel.setter
     def x_axel(self,value):
         self._x_axel = value
-        self.rect.left = value*SIZE
+        self.rect.left = value*self.size
 
     def drop(self,group):
         self.y_axel+=1
-        if self.rect.bottom > SIZE*20 or self.hits(group) is True:
+        if self.rect.bottom > self.size*20 or self.hits(group) is True:
             self.y_axel-=1
             self.current= False
 
     def right(self,group):
         self.x_axel+=1
-        if self.rect.right > SIZE*10 or self.hits(group) is True:
+        if self.rect.right > self.size*10 or self.hits(group) is True:
             self.x_axel-=1
 
     def left(self,group):
@@ -99,11 +100,11 @@ class Block(pygame.sprite.Sprite):
 
 
         for i in self.shape:
-            if self.rect.right > SIZE*10 or self.hits(group) is True:
+            if self.rect.right > self.size*10 or self.hits(group) is True:
                 self.x_axel-=1
             if self.x_axel < 0 or self.hits(group) is True:
                 self.x_axel +=1
-            if self.hits(group) is True or self.rect.bottom > SIZE*20:
+            if self.hits(group) is True or self.rect.bottom > self.size*20:
                 self.y_axel-=1
 
             self.draw(self._x_axel,self._y_axel)

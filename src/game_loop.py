@@ -1,13 +1,11 @@
 import pygame
-
-
-
+from user_interface import GameScreen
+from level import Level
 class GameLoop:
-    def __init__(self, level, size, clock, user_interface):
-        self.level = level
-        self.size = size
+    def __init__(self, size, clock):
+        self.level = Level()
         self.clock = clock
-        self._user_interface = user_interface
+        self._user_interface = GameScreen(self.level)
         self.pause = True
         self.running = True
         self.score = 0

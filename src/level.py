@@ -1,13 +1,13 @@
 import random
 import pygame
 from sprites.blocks import Sblock, Jblock, Lblock, Nblock, Iblock, Tblock, Zblock
-SIZE = 40
-
+SIZE =40
 class Level(pygame.sprite.Group):
 
     def __init__(self, *args, **kwargs):
         super().__init__(self, *args, **kwargs)
         self.x_x,self.y_y=0,0
+        self.size=SIZE
         self.grid=None
         self.new_block=None
         self.block()
@@ -39,5 +39,7 @@ class Level(pygame.sprite.Group):
     def rotate(self):
         self.latest.rotate(self)
 
+    def large(self):
+        self.size+=1
 def random_block():
     return random.choice((Sblock,Jblock,Lblock,Nblock,Iblock,Zblock,Tblock))()

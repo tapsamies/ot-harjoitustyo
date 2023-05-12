@@ -40,3 +40,5 @@
 |36   |10.5.23| pelissä on nyt pause -valikko, joka ei tosin vielä tee mitään |
 |37   |11.5.23| pelissä on nyt pause -valikko, ja ohjeet kuinka siitä pääsee pois |
 |38   |12.5.23| tehty valikolle oma ikoni |
+|39   |12.5.23| mietitty kuinka ikkunaa pystyisi suurentamaan reaaliajassa |
+|40   |12.5.23| todettu että koon muuttaminen vaatii liikaa työtä |
