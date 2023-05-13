@@ -42,3 +42,5 @@
 |38   |12.5.23| tehty valikolle oma ikoni |
 |39   |12.5.23| mietitty kuinka ikkunaa pystyisi suurentamaan reaaliajassa |
 |40   |12.5.23| todettu että koon muuttaminen vaatii liikaa työtä |
+|41   |13.5.23| tehty hiirelle toiminnallisuutta peliin |
+|42   |13.5.23| palat tippuu automaattisesti ja alettu suunnittelemaan rivien tyhjentämistä |

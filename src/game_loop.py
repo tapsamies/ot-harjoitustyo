@@ -3,8 +3,10 @@ from user_interface import GameScreen
 from level import Level
 class GameLoop:
     def __init__(self, size, clock):
+        self.time=0
         self.level = Level()
         self.clock = clock
+        self.size = size
         self._user_interface = GameScreen(self.level)
         self.pause = True
         self.running = True
@@ -14,12 +16,15 @@ class GameLoop:
 
     def run(self):
         while self.running is True:
+            if pygame.time.get_ticks()-self.time >1000:
+                if self.pause is False:
+                    self.level.drop()
+                self.time=pygame.time.get_ticks()
             self.actions()
             self.interface()
             #if self.level.line_completed():
              #   self.score+=10
             self.clock.tick(60)
-            self.clock.get_time()
 
     def actions(self):
         for event in pygame.event.get():
@@ -36,6 +41,10 @@ class GameLoop:
                     self.pause = not self.pause
                 if event.key == pygame.K_ESCAPE:
                     self.running = False
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                m_x,m_y=pygame.mouse.get_pos()
+                if m_x in range(self.size*12,self.size*13) and m_y<self.size:
+                    self.pause = not self.pause
             elif event.type == pygame.QUIT:
                 self.running=False
 

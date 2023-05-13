@@ -25,7 +25,8 @@ class GameScreen:
                               ((0, i*self.size), (self.size*10, i*self.size)))
         self.level.draw(self.display)
         self.writer("Score",(self.width*0.9,50))
-        self.icons()
+        self.settings_icon()
+        self.pause_icon()
         pygame.display.update()
 
     def pause(self):
@@ -43,8 +44,8 @@ class GameScreen:
     def writer(self,string,position):
         self.display.blit(self.font.render(f"{string}",True,self.color,self.h_light),(position))
 
-    def icons(self):
-        #Tämä kaunis viritelmä mahdollistaa ikonin skaalautumisen
+    def settings_icon(self):
+        #Tämä kaunis viritelmä ottaa ikkunan koon huomioon ikonia piirtäessä
         settings_icon= [[self.width-self.size*0.675,0],
                         [self.width-self.size*0.75,self.size*0.075],
                         [self.width-self.size*0.625,self.size*0.225],
@@ -58,6 +59,6 @@ class GameScreen:
                         [self.width-self.size*0.525,self.size*0.35],
                         [self.width-self.size*0.425,self.size*0.175]]
         pygame.draw.polygon(self.display,self.h_light,settings_icon)
-
+    def pause_icon(self):
         pygame.draw.line(self.display,self.h_light,(self.width-80,0),(self.width-80,20),4)
         pygame.draw.line(self.display,self.h_light,(self.width-72,0),(self.width-72,20),4)

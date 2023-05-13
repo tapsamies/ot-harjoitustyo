@@ -11,6 +11,7 @@ class Level(pygame.sprite.Group):
         self.grid=None
         self.new_block=None
         self.block()
+        self.is_row_complete()
 
     def block(self):
 
@@ -18,8 +19,9 @@ class Level(pygame.sprite.Group):
         self.add(uusi_palikka)
         self.new_block=random_block()
         #self.teetee()
-
-
+    def is_row_complete(self):
+        for i in range(len(self.sprites())):
+            print(i)
     @property
     def latest(self):
         return self.sprites()[-1]
