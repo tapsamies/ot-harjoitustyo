@@ -45,3 +45,6 @@
 |41   |13.5.23| tehty hiirelle toiminnallisuutta peliin |
 |42   |13.5.23| palat tippuu automaattisesti ja alettu suunnittelemaan rivien tyhjentämistä |
 |43   |13.5.23| peli päättyy kun palaa ei saa asetettua |
+|44   |14.5.23| pelin voi käynnistää uudelleen päättymisen jälkeen |
+|45   |14.5.23| kokonaisten rivien hallinta suunnittelussa |
+|46   |14.5.23| Jos alin rivi täyttyy, niin se kyetään poistamaan, mutta ei muuten toimi vielä oikein |

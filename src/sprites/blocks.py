@@ -44,9 +44,6 @@ class Block(pygame.sprite.Sprite):
             if i == self:
                 continue
             if pygame.sprite.collide_mask(self,i) is not None:
-                if self.y_axel <0:
-                    pygame.quit()
-
                 return True
         return False
 

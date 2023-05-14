@@ -2,9 +2,9 @@ import pygame
 SIZE = 40
 
 class GameScreen:
-    def __init__(self, level):
-        self.size = SIZE
-        self.display = pygame.display.set_mode((self.size*14,self.size*20))
+    def __init__(self, level,score):
+        self.score = score
+        self.display = pygame.display.set_mode((SIZE*14,SIZE*20))
         self.level = level
         self.height = self.display.get_height()
         self.width = self.display.get_width()
@@ -18,13 +18,13 @@ class GameScreen:
 
         for i in range(0,11):
             pygame.draw.lines(self.display,(110, 110, 110),True,
-                              ((i*self.size, 0), (i*self.size, self.size*20)))
+                              ((i*SIZE, 0), (i*SIZE, SIZE*20)))
 
         for i in range(0, 21):
             pygame.draw.lines(self.display, (110, 110, 110), True,
-                              ((0, i*self.size), (self.size*10, i*self.size)))
+                              ((0, i*SIZE), (SIZE*10, i*SIZE)))
         self.level.draw(self.display)
-        self.writer("Score",(self.width*0.9,50))
+        self.writer("Score: {self.score}",(self.width*0.9,50))
         self.settings_icon()
         self.pause_icon()
         pygame.display.update()
@@ -41,23 +41,30 @@ class GameScreen:
         self.writer("Press Esc to Escape",(200,300))
         pygame.display.update()
 
+    def end_screen(self):
+        self.level.draw(self.display)
+        self.display.fill((0,0,0))
+        self.writer("Game Over, press R to restart",(200,200))
+        self.writer(f"Your score was:{self.score}",(300,300))
+        pygame.display.update()
+
     def writer(self,string,position):
         self.display.blit(self.font.render(f"{string}",True,self.color,self.h_light),(position))
 
     def settings_icon(self):
         #Tämä kaunis viritelmä ottaa ikkunan koon huomioon ikonia piirtäessä
-        settings_icon= [[self.width-self.size*0.675,0],
-                        [self.width-self.size*0.75,self.size*0.075],
-                        [self.width-self.size*0.625,self.size*0.225],
-                        [self.width-self.size*0.7,self.size*0.325],
-                        [self.width-self.size*0.9,self.size*0.175],
-                        [self.width-self.size,self.size*0.275],
-                        [self.width-self.size*0.775,self.size*0.5],
-                        [self.width-self.size*0.625,self.size*0.425],
-                        [self.width-self.size*0.075,self.size],
-                        [self.width-0,self.size*0.875],
-                        [self.width-self.size*0.525,self.size*0.35],
-                        [self.width-self.size*0.425,self.size*0.175]]
+        settings_icon= [[self.width-SIZE*0.675,0],
+                        [self.width-SIZE*0.75,SIZE*0.075],
+                        [self.width-SIZE*0.625,SIZE*0.225],
+                        [self.width-SIZE*0.7,SIZE*0.325],
+                        [self.width-SIZE*0.9,SIZE*0.175],
+                        [self.width-SIZE,SIZE*0.275],
+                        [self.width-SIZE*0.775,SIZE*0.5],
+                        [self.width-SIZE*0.625,SIZE*0.425],
+                        [self.width-SIZE*0.075,SIZE],
+                        [self.width-0,SIZE*0.875],
+                        [self.width-SIZE*0.525,SIZE*0.35],
+                        [self.width-SIZE*0.425,SIZE*0.175]]
         pygame.draw.polygon(self.display,self.h_light,settings_icon)
     def pause_icon(self):
         pygame.draw.line(self.display,self.h_light,(self.width-80,0),(self.width-80,20),4)
