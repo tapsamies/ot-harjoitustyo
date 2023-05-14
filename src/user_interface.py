@@ -2,8 +2,7 @@ import pygame
 SIZE = 40
 
 class GameScreen:
-    def __init__(self, level,score):
-        self.score = score
+    def __init__(self, level):
         self.display = pygame.display.set_mode((SIZE*14,SIZE*20))
         self.level = level
         self.height = self.display.get_height()
@@ -12,7 +11,7 @@ class GameScreen:
         self.color = (0,0,0)
         self.h_light= (255,255,255)
 
-    def show(self):
+    def show(self,score):
         self.level.draw(self.display)
         self.display.fill((0,0,0))
 
@@ -24,7 +23,7 @@ class GameScreen:
             pygame.draw.lines(self.display, (110, 110, 110), True,
                               ((0, i*SIZE), (SIZE*10, i*SIZE)))
         self.level.draw(self.display)
-        self.writer("Score: {self.score}",(self.width*0.9,50))
+        self.writer(f"Score: {score}",(self.width*0.85,50))
         self.settings_icon()
         self.pause_icon()
         pygame.display.update()
@@ -41,11 +40,11 @@ class GameScreen:
         self.writer("Press Esc to Escape",(200,300))
         pygame.display.update()
 
-    def end_screen(self):
+    def end_screen(self,score):
         self.level.draw(self.display)
         self.display.fill((0,0,0))
         self.writer("Game Over, press R to restart",(200,200))
-        self.writer(f"Your score was:{self.score}",(300,300))
+        self.writer(f"Your score was:{score}",(300,300))
         pygame.display.update()
 
     def writer(self,string,position):
@@ -53,6 +52,7 @@ class GameScreen:
 
     def settings_icon(self):
         #Tämä kaunis viritelmä ottaa ikkunan koon huomioon ikonia piirtäessä
+        #Ikonilla ei voi tehdä mitään
         settings_icon= [[self.width-SIZE*0.675,0],
                         [self.width-SIZE*0.75,SIZE*0.075],
                         [self.width-SIZE*0.625,SIZE*0.225],

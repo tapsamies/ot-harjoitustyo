@@ -48,3 +48,4 @@
 |44   |14.5.23| pelin voi käynnistää uudelleen päättymisen jälkeen |
 |45   |14.5.23| kokonaisten rivien hallinta suunnittelussa |
 |46   |14.5.23| Jos alin rivi täyttyy, niin se kyetään poistamaan, mutta ei muuten toimi vielä oikein |
+|47   |14.5.23| tehty vielä viimeisiä muokkauksia ennen deadlineä |

@@ -10,7 +10,7 @@ class GameLoop:
         self.pause = True
         self.running = True
         self.score = 0
-        self._user_interface = GameScreen(self.level,self.score)
+        self._user_interface = GameScreen(self.level)
         self.run()
 
 
@@ -22,9 +22,8 @@ class GameLoop:
                 self.time=pygame.time.get_ticks()
             self.actions()
             self.interface()
-            #if self.level.line_completed() is True:
-             #   self.score+=10
             self.clock.tick(60)
+            self.score=self.level.score_increase()
 
     def actions(self):
         for event in pygame.event.get():
@@ -40,7 +39,7 @@ class GameLoop:
                     self.level.rotate()
                 if event.key == pygame.K_r:
                     self.level=Level()
-                    self._user_interface=GameScreen(self.level,self.score)
+                    self._user_interface=GameScreen(self.level)
                 if event.key == pygame.K_SPACE:
                     self.pause = not self.pause
                 if event.key == pygame.K_ESCAPE:
@@ -50,9 +49,9 @@ class GameLoop:
 
     def interface(self):
         if self.level.end_game() is True:
-            self._user_interface.end_screen()
+            self._user_interface.end_screen(self.score)
 #elif -lauseketta käyttämällä ruutu ei ala vilkkumaan eri näyttövaihtoehtojen välillä
         elif self.pause is False:
-            self._user_interface.show()
+            self._user_interface.show(self.score)
         elif self.pause is True:
             self._user_interface.pause()

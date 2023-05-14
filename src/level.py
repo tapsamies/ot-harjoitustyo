@@ -10,6 +10,7 @@ class Level(pygame.sprite.OrderedUpdates):
         self.make_grid()
         self.new_block=None
         self.ended=False
+        self.row_cleared=0
         self.block()
         self.is_row_complete()
 
@@ -23,23 +24,21 @@ class Level(pygame.sprite.OrderedUpdates):
         self.is_row_complete()
 
     def is_row_complete(self):
-        #print()
         for i in self.grid:
-            #print(i)
             if i.count(1)>9:
                 #jos alin rivi tulee täyteen, niin se tyhjenee mut muuten ei skulaa
+                self.row_cleared+=1
                 for j in self.sprites():
                     j.y_axel+=1
+                for k in range(10):
+                    i[k]=0
 
     def update_grid(self):
-        #self.make_grid()
-        #jos SIZE*SIZE kokoinen alue sisältää spriten, jota j käy läpi, niin sen pitäisi muuttaa gridissä 0 -> 1
         for i in range(20):
             for j in range(10):
                 for k in self.sprites():
                     if k.rect.collidepoint(((j*SIZE),(i*SIZE))):
                         self.grid[i][j] = 1
-                #print(self.grid[i][j])
     @property
     def latest(self):
         return self.sprites()[-1]
@@ -64,5 +63,7 @@ class Level(pygame.sprite.OrderedUpdates):
     def end_game(self):
         return self.ended
 
+    def score_increase(self):
+        return self.row_cleared
 def random_block():
     return random.choice((Sblock,Jblock,Lblock,Nblock,Iblock,Zblock,Tblock))()

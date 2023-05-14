@@ -31,13 +31,7 @@ class Block(pygame.sprite.Sprite):
         self.do_mask()
 
     def do_mask(self):
-        #tarvitaan törmäystä varten
         self.mask= pygame.mask.from_surface(self.image)
-
-    def rdraw(self):
-        #tähän tulee toiminnallisuus uuden blockn piirtämistä varten
-        self.draw(self.x_axel,self.y_axel)
-
 
     def hits(self,group):
         for i in group:

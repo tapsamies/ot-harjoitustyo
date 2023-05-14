@@ -9,8 +9,6 @@ Sovelluksena on tetris -pelin klooni. Kuten tetriksessäkin on pelissä ideana s
 ### Suunniteltu toiminnallisuus
 
  - Jos vaakasuuntainen rivi saadaan täytettyä, katoaa rivi näkyvistä ja pelaaja saa pisteitä
-	- Peli nopeutuu suhteessa pisteiden kasvuun
  - Peli loppuu kun vaakarivien maksimikorkeus ylittää pelaajalle näkyvän ruudukon
-	- Maksimipisteet tallennetaan jos saadaan uusi ennätys
- - Pelissä on kaikki tetriksen vakiomuotoiset palikat(tehty)
-	- Jonkinlainen satunnaisgeneraattori palikoiden tekemistä varten(tehty)
+ - Pelissä on kaikki tetriksen vakiomuotoiset palikat ja satunnainen generointi
+ - Pelin voi aloittaa uudestaan ja laittaa tauolle
